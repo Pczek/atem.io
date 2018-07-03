@@ -1,72 +1,76 @@
-body {
-  background-color: #4B4B4B;
-}
-
 a {
-  color: #F9D7D7;
-  text-decoration: none;
+	color: #f9d7d7;
+	text-decoration: none;
 }
 
 a:hover {
-  background-color: #99BCBD;
-  color: #D9D9D9;
+	background-color: #99bcbd;
+	color: #d9d9d9;
 }
 
 ::selection {
-  background: #99BCBD; /* WebKit/Blink Browsers */
+	background: #99bcbd; /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: #99BCBD; /* Gecko Browsers */
+	background: #99bcbd; /* Gecko Browsers */
+}
+
+::selection {
+	background: #000; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+	background: #000; /* Gecko Browsers */
 }
 
 .glitch {
-  position: relative;
-  margin: 0 auto;
+	position: relative;
+	margin: 0 auto;
 }
 
 @keyframes noise-anim {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-    }
-  }
+	$steps: 20;
+	@for $i from 0 through $steps {
+		#{percentage($i*(1/$steps))} {
+			clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+		}
+	}
 }
 
 .glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  text-shadow: -1px 0 red;
-  top: 0;
-  color: white;
-  background: black;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-  animation-iteration-count: 5;
+	content: attr(data-text);
+	position: absolute;
+	left: 2px;
+	text-shadow: -1px 0 red;
+	top: 0;
+	color: white;
+	background: black;
+	overflow: hidden;
+	clip: rect(0, 900px, 0, 0);
+	animation: noise-anim 2s infinite linear alternate-reverse;
+	animation-iteration-count: 5;
 }
 
 @keyframes noise-anim-2 {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-    }
-  }
+	$steps: 20;
+	@for $i from 0 through $steps {
+		#{percentage($i*(1/$steps))} {
+			clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+		}
+	}
 }
 
 .glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 blue;
-  top: 0;
-  color: white;
-  background: black;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
-  animation-iteration-count: 5;
+	content: attr(data-text);
+	position: absolute;
+	left: -2px;
+	text-shadow: 1px 0 blue;
+	top: 0;
+	color: white;
+	background: black;
+	overflow: hidden;
+	clip: rect(0, 900px, 0, 0);
+	animation: noise-anim-2 3s infinite linear alternate-reverse;
+	animation-iteration-count: 5;
 }
