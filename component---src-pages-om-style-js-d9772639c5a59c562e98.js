@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{FB1U:function(n,e,i){"use strict";i.r(e),i.d(e,"Page",(function(){return t}));var t=i("vOnD").b.div.withConfig({displayName:"style__Page",componentId:"wh9pnq-0"})(["display:flex;width:100vw;flex-direction:column;align-items:center;"]);e.default=function(){return null}}}]);
+//# sourceMappingURL=component---src-pages-om-style-js-d9772639c5a59c562e98.js.map
